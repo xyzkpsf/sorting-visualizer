@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Topbar from './components/Topbar';
+import Sketch from './components/Sketch';
+import { useState } from 'react';
 
 function App() {
+  const [choice, setChoice] = useState('');
+  const [action, setAction] = useState('');
+  const [imgChoice, setImgChoice] = useState('Cal');
+  const [partitionSize, setPartitionSize] = useState(8);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Topbar
+        setChoice={setChoice}
+        setAction={setAction}
+        setImgChoice={setImgChoice}
+        setPartitionSize={setPartitionSize}
+      />
+      <Sketch
+        choice={choice}
+        action={action}
+        imgChoice={imgChoice}
+        partitionSize={partitionSize}
+      />
     </div>
   );
 }
