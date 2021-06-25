@@ -1,3 +1,7 @@
+# A Sorting Algorithm Visualization website.
+
+## I selected a few interesting pictures to visually show how different sorting algorithms work. Because of the speed difference between the algorithms (or due to the difference in rendering implementation), users can choose to partition the picture into different sizes to achieve the best visual effect.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
